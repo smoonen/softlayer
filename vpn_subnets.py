@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import sys
-import ipaddress
-import SoftLayer
+import ipaddress  # pip install ipaddress
+import SoftLayer  # pip install softlayer
 
 # Your SoftLayer account credentials
 USERNAME=''
