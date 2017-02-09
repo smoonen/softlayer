@@ -40,8 +40,11 @@ for try_count in [1, 2] :
 print "Your currently selected subnets:"
 subnets = client['SoftLayer_User_Customer'].getOverrides(id=user['id'])
 for subnet in subnets :
-  details = client['SoftLayer_Network_Subnet'].getObject(id=subnet['subnetId'])
-  print "  %s/%s" % (details['networkIdentifier'], details['cidr'])
+  try :
+    details = client['SoftLayer_Network_Subnet'].getObject(id=subnet['subnetId'])
+    print "  %s/%s" % (details['networkIdentifier'], details['cidr'])
+  except :
+    pass
   client['SoftLayer_Network_Service_Vpn_Overrides'].deleteObject(id=subnet['id'])
 
 # Locate the subnets that contain all of the IP addresses we are interested in
