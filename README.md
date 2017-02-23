@@ -14,3 +14,8 @@ set of subnets that encompass the IP addresses you selected.
 
 *Nota bene:* VPN configuration changes seem to take several minutes to take effect.
 
+## empty_vlans.py
+
+This script helps to identify VLANs in your SoftLayer account that have no attached hardware or virtual guests. These VLANs are not in use and are candidates for cancellation together with their subnets.
+
+
