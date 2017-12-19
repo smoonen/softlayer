@@ -18,4 +18,7 @@ set of subnets that encompass the IP addresses you selected.
 
 This script helps to identify VLANs in your SoftLayer account that have no attached hardware or virtual guests. These VLANs are not in use and are candidates for cancellation together with their subnets.
 
+## monitor.py
+
+This script searches for bare metal servers in your SoftLayer account for which the SoftLayer monitor reports that the server is down and for which the monitor is configured to monitor the public IP address rather than the private IP address. For these servers, the monitor configuration is replaced with a new configuration that monitors the private IP address instead. This is useful for vSphere (ESXi) hosts that have a public interface but whose public IP address is shut down.
 
