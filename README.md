@@ -1,6 +1,10 @@
 # softlayer
 SoftLayer related tooling
 
+## ims_token.py
+
+Demonstrate how to authenticate with the IMS API using an IBM Cloud Identity and Access Management (IAM) token rather than a classic API key.
+
 ## vpn_subnets.py
 
 SoftLayer limits a VPN connection to 64 subnets. If you have more than 64 subnets in
